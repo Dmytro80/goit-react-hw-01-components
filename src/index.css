@@ -29,17 +29,3 @@ ul {
 li {
   list-style: none;
 }
-
-.x {
-  width: 100% / 3;
-  justify-content: center;
-  background-color: rgb(126, 126, 126);
-  padding-top: 16px;
-  padding-bottom: 16px;
-  margin-bottom: 4px;
-  border-top: 1px solid rgb(126, 126, 126);
-}
-
-a :not(:last-child) {
-  border-right: 2px solid rgb(166, 166, 166);
-}
