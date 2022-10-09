@@ -1,20 +1,22 @@
 import PropTypes from 'prop-types';
+import { StatsList, StatsItem, StatsTitle, StatsValue } from './Stats.styled';
+
 export const Stats = ({ stats: { followers, views, likes } }) => {
   return (
-    <ul>
-      <li>
-        <span>Followers</span>
-        <span>{followers}</span>
-      </li>
-      <li>
-        <span>Views</span>
-        <span>{views}</span>
-      </li>
-      <li>
-        <span>Likes</span>
-        <span>{likes}</span>
-      </li>
-    </ul>
+    <StatsList>
+      <StatsItem>
+        <StatsTitle>Followers</StatsTitle>
+        <StatsValue>{followers}</StatsValue>
+      </StatsItem>
+      <StatsItem>
+        <StatsTitle>Views</StatsTitle>
+        <StatsValue>{views}</StatsValue>
+      </StatsItem>
+      <StatsItem>
+        <StatsTitle>Likes</StatsTitle>
+        <StatsValue>{likes}</StatsValue>
+      </StatsItem>
+    </StatsList>
   );
 };
 Stats.propTypes = {

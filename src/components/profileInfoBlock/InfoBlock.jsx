@@ -1,16 +1,25 @@
 import { MdOutlineAlternateEmail } from 'react-icons/md';
 import PropTypes from 'prop-types';
+import {
+  UserAvatar,
+  UserName,
+  UserTag,
+  UserLocation,
+  Wrapper,
+} from './InfoBlock.styled';
+
 export const InfoBlock = ({ username, tag, location, avatar }) => {
   return (
-    <div>
-      <img src={avatar} alt={username} />
-      <p>{username}</p>
-      <p>
-        <MdOutlineAlternateEmail size="30" />
+    <Wrapper>
+      <UserAvatar src={avatar} alt={username} width="350" />
+
+      <UserName>{username}</UserName>
+      <UserTag>
+        <MdOutlineAlternateEmail size="28" />
         {tag}
-      </p>
-      <p>{location}</p>
-    </div>
+      </UserTag>
+      <UserLocation>{location}</UserLocation>
+    </Wrapper>
   );
 };
 InfoBlock.propTypes = {

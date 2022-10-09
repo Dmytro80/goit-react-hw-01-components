@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import { InfoBlock } from '../profileInfoBlock/InfoBlock';
 import { Stats } from '../profileStats/Stats';
+import { Wrapper } from './Profile.styled';
 
 export const Profile = ({
   user: { username, tag, location, avatar, stats },
 }) => {
   return (
-    <div>
+    <Wrapper>
       <InfoBlock
         username={username}
         avatar={avatar}
@@ -14,7 +15,7 @@ export const Profile = ({
         location={location}
       />
       <Stats stats={stats} />
-    </div>
+    </Wrapper>
   );
 };
 Profile.propTypes = {
