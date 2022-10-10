@@ -30,12 +30,3 @@ ul {
 li {
   list-style: none;
 }
-.x {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  font-size: 24px;
-  text-align: center;
-  color: #ffffffef;
-  text-transform: capitalize;
-  background-color: rgb(223, 220, 220);
-}

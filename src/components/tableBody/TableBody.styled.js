@@ -7,4 +7,7 @@ export const CellBody = styled.td`
   text-align: center;
   color: grey;
   text-transform: capitalize;
+  :not(:last-child) {
+    border-right: 1px solid #d7d7d7;
+  }
 `;

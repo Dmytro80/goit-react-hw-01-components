@@ -10,4 +10,6 @@ export const RowHead = styled.tr`
 export const CellHead = styled.th`
   padding-top: 8px;
   padding-bottom: 8px;
+  :not(:last-child) {
+    border-right: 1px solid #d7d7d7;
 `;
