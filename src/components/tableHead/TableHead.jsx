@@ -1,11 +1,12 @@
+import { RowHead, CellHead } from './TableHead.styled';
 export const TableHead = () => {
   return (
     <thead>
-      <tr>
-        <th>Type</th>
-        <th>Amount</th>
-        <th>Currency</th>
-      </tr>
+      <RowHead>
+        <CellHead>Type</CellHead>
+        <CellHead>Amount</CellHead>
+        <CellHead>Currency</CellHead>
+      </RowHead>
     </thead>
   );
 };
