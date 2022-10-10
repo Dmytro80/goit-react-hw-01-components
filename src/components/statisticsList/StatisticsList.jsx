@@ -7,18 +7,31 @@ import {
   StatsValue,
 } from './StatisticsList.styled';
 
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+
 export const StatisticsList = ({ stats }) => {
   return (
     <StatsList>
-      {stats.map(stat => (
-        <StatsItem key={stat.id}>
-          <StatsTitle>{stat.label}</StatsTitle>
-          <StatsValue>
-            {stat.percentage}
-            <AiOutlinePercentage size="28" />
-          </StatsValue>
-        </StatsItem>
-      ))}
+      {stats.map(stat => {
+        const backgroundColor = getRandomHexColor();
+
+        return (
+          <StatsItem
+            key={stat.id}
+            style={{
+              backgroundColor: backgroundColor,
+            }}
+          >
+            <StatsTitle>{stat.label}</StatsTitle>
+            <StatsValue>
+              {stat.percentage}
+              <AiOutlinePercentage size="28" />
+            </StatsValue>
+          </StatsItem>
+        );
+      })}
     </StatsList>
   );
 };
