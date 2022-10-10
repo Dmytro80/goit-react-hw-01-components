@@ -4,7 +4,6 @@ import { FriendList } from './friendList/FriendList';
 import user from 'components/user.json';
 import data from 'components/data.json';
 import friends from 'components/friends.json';
-console.log(friends);
 
 export const App = () => {
   return (
