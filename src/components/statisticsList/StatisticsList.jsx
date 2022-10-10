@@ -1,19 +1,25 @@
 import { AiOutlinePercentage } from 'react-icons/ai';
 import PropTypes from 'prop-types';
+import {
+  StatsList,
+  StatsItem,
+  StatsTitle,
+  StatsValue,
+} from './StatisticsList.styled';
 
 export const StatisticsList = ({ stats }) => {
   return (
-    <ul>
+    <StatsList>
       {stats.map(stat => (
-        <li key={stat.id}>
-          <span>{stat.label}</span>
-          <span>
+        <StatsItem key={stat.id}>
+          <StatsTitle>{stat.label}</StatsTitle>
+          <StatsValue>
             {stat.percentage}
-            <AiOutlinePercentage />
-          </span>
-        </li>
+            <AiOutlinePercentage size="28" />
+          </StatsValue>
+        </StatsItem>
       ))}
-    </ul>
+    </StatsList>
   );
 };
 StatisticsList.propTypes = {

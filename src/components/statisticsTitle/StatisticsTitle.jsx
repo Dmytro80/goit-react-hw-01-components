@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
+import { Title } from './StatisticsTitle.styled';
 
 export const StatisticsTitle = ({ title }) => {
-  return { title } && <h2>{title}</h2>;
+  return <Title>{title}</Title>;
 };
 
 StatisticsTitle.propTypes = {

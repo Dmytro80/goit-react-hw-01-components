@@ -6,15 +6,16 @@ import data from 'components/data.json';
 export const App = () => {
   return (
     <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-        backgroundColor: 'gainsboro',
-      }}
+      style={
+        {
+          // height: '100vh',
+          // display: 'flex',
+          // justifyContent: 'center',
+          // alignItems: 'center',
+          // fontSize: 40,
+          // color: '#010101',
+        }
+      }
     >
       <Profile user={user} />
       <Statistics title="Upload stats" stats={data} />
