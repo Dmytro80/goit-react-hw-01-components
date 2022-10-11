@@ -1,11 +1,5 @@
-import {
-  FriendsList,
-  FriendItem,
-  FriendName,
-  FriendAvatar,
-  FriendActive,
-  FriendNotActive,
-} from './FriendList.styled';
+import { FriendsList } from './FriendList.styled';
+import { FriendListItem } from '../friendListItem/FriendListItem';
 import PropTypes from 'prop-types';
 
 export const FriendList = ({ friends }) => {
@@ -13,12 +7,12 @@ export const FriendList = ({ friends }) => {
     <FriendsList>
       {friends.map(friend => {
         return (
-          <FriendItem key={friend.id}>
-            {friend.isOnline ? <FriendActive /> : <FriendNotActive />}
-
-            <FriendAvatar src={friend.avatar} alt="User avatar" width="48" />
-            <FriendName>{friend.name}</FriendName>
-          </FriendItem>
+          <FriendListItem
+            avatar={friend.avatar}
+            name={friend.name}
+            isOnline={friend.isOnline}
+            key={friend.id}
+          />
         );
       })}
     </FriendsList>
